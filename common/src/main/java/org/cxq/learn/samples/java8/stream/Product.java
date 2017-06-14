@@ -43,6 +43,16 @@ public class Product {
     }
 
     @Override
+    public int hashCode() {
+        return this.name.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return ((Product) obj).getName().equalsIgnoreCase(this.name);
+    }
+
+    @Override
     public String toString() {
         return "{name=" + name + ",onSale=" + isOnSale + ",price=" + price + "}";
     }
